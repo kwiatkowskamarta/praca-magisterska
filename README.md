@@ -7,12 +7,15 @@
     ```bash
     git clone https://github.com/kwiatkowskamarta/AML_Classification.git
     ```
-2.  **Otwórz projekt:** Kliknij plik `AML_Classification.Rproj`.
+    
+2.  **Otwórz projekt:** Kliknij plik `AML_Classification.Rproj
+
 3.  **Zainstaluj biblioteki:**
     Uruchom komendę, która odtworzy środowisko z wymaganymi wersjami pakietów:
     ```r
     renv::restore()
     ```
+    
 4.  **Uruchom analizę:**
     ```r
     source("scripts/01_data_download.R")
