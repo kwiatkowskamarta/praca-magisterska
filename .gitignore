@@ -1,0 +1,25 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+
+# --- Środowisko Renv ---
+library/
+renv/library/
+renv/python/
+renv/staging/
+
+# --- DANE (Tego nie chcemy na GitHubie!) ---
+data/
+GDCdata/
+MANIFEST.txt
+*.tar.gz
+
+# --- Wyniki tymczasowe ---
+results/models/
+*.rds
+
+# --- Ignorowanie UUID folderów z GDC ---
+[0-9a-f]*-[0-9a-f]*-[0-9a-f]*-[0-9a-f]*/
+*.RData
