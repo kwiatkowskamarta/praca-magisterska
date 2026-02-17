@@ -39,7 +39,6 @@ query_rna <- GDCquery(
 
 GDCdownload(query_rna, 
             method = "api", 
-            files.per.chunk = 10,
             directory = "GDCdata")
 
 data_rna <- GDCprepare(query_rna, directory = "GDCdata")
