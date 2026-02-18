@@ -5,7 +5,7 @@
 
 1.  **Sklonuj repozytorium:**
     ```bash
-    git clone https://github.com/kwiatkowskamarta/praca-magisterka.git
+    git clone https://github.com/kwiatkowskamarta/praca-magisterska.git
     ```
     
 2.  **Otwórz projekt:** Plik `AML_Classification.Rproj`
