@@ -35,7 +35,7 @@ message("\nKoniec obliczen.")
 # wyniki
 print(boruta_output)
 
-# naprawa "tentative" -- jeśli po 200 rundach Boruta nadal nie jest pewna co do niektórych genów, zmuszam ją do podjęcia decyzji (TentativeRoughFix).
+# naprawa "tentative" - jeśli po 200 rundach Boruta nadal nie jest pewna co do niektórych genów, zmuszam ją do podjęcia decyzji (TentativeRoughFix).
 if(any(boruta_output$finalDecision == "Tentative")) {
   message("Znaleziono atrybuty niepewne (Tentative) - ostateczna decyzja...")
   boruta_output <- TentativeRoughFix(boruta_output)
@@ -52,8 +52,6 @@ imps_confirmed <- imps[imps$decision == "Confirmed", ]
 top_genes <- row.names(imps_confirmed)[order(imps_confirmed$meanImp, decreasing = TRUE)]
 
 message("Top 10 najważniejszych genów:")
-print(head(top_genes, 10))
-
 # zapis
 # (pełny obiekt Boruta (do wykresów) oraz dataset do modeli)
 ml_data_final <- ml_df %>% 
@@ -64,3 +62,4 @@ if(!dir.exists("results/models")) dir.create("results/models", recursive = TRUE)
 save(boruta_output, ml_data_final, final_genes, file = "results/models/Boruta_Results.RData")
 
 message(">>> Wyniki zapisane w results/models/Boruta_Results.RData <<<")
+
